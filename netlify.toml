@@ -1,0 +1,9 @@
+[build]
+  publish = "dist"
+  command = "cp -a --parents ./src/. ./dist "
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
