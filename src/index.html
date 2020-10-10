@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
-<style>
-	body {
-		margin: 30px;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-	}
-</style>
-</head>
-<body>
-<h1 id="url"></h1>
-<div id="qrcode"></div>
-</body>
-<script>
-  const host = window.location.host
-  const qrUrl = window.location.href.split(host + "/")[1]
-  
-  const urlEl = document.getElementById("url")
-
-  if (qrUrl) {
-    urlEl.innerText = `QRCode for URL ${qrUrl}`;
-    new QRCode(document.getElementById("qrcode"), qrUrl)
-  } else {
-    urlEl.innerText = `Type ${host}/ in front of any URL to create QRCode.`
-  }
-</script>
+   <head>
+      <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+      <style>
+         body {
+         margin: 30px;
+         font-family: "Comic Sans MS", cursive, sans-serif;
+         }
+      </style>
+   </head>
+   <body>
+      <h1 id="url"></h1>
+      <div id="qrcode"></div>
+   </body>
+   <script>
+      const host = window.location.host
+      const qrUrl = window.location.href.split(host + "/")[1]
+      
+      const urlEl = document.getElementById("url")
+      
+      if (qrUrl) {
+        urlEl.innerText = `QRCode for URL ${qrUrl}`;
+        new QRCode(document.getElementById("qrcode"), qrUrl)
+      } else {
+        urlEl.innerText = `Type ${host}/ in front of any URL to create QRCode.`
+      }
+   </script>
 </html>
