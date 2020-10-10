@@ -1,6 +1,6 @@
 [build]
   publish = "dist"
-  command = "cp -a --parents ./src/. ./dist "
+  command = "cp -a ./src/. ./dist "
 
 [[redirects]]
   from = "/*"
